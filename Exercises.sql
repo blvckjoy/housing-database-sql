@@ -92,7 +92,7 @@ ORDER BY COUNT(hou.house_id) DESC;
 --For each neighborhood, show the count of houses with 4 or more bedrooms.
 SELECT
     nei.name AS neighborhood_name,
-    COUNT(house_id) AS house_count
+    COUNT(hou.house_id) AS house_count
 FROM houses AS hou
     JOIN neighborhoods AS nei
     ON hou.neighborhood_id = nei.neighborhood_id
